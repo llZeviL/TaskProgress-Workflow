@@ -9,9 +9,19 @@ async function getAllUsers() {
 }
 
 async function getUserById(id) {
-    const db = await connectDB();
-    const collection = db.collection('usuario');
-    return await collection.findOne({ _id: new ObjectId(id) });
+    try {
+        const db = await connectDB(); // Conecta a la base de datos
+        const collection = db.collection('usuario');
+        const usuario = await collection.findOne({ _id: new ObjectId(id) }); // Busca el usuario por ID
+        if (!usuario) {
+            throw new Error('Usuario no encontrado.'); // Lanza un error si no se encuentra el usuario
+        }
+        return usuario; // Devuelve el usuario encontrado
+    } catch (error) {
+        console.error('Error al obtener datos del usuario:', error);
+      
+        throw error; // Re-lanza el error para que sea manejado por el controlador que llama a esta función
+    }
 }
 
 async function createUser(data) {

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/FormSolicitud.css';
 import '../Styles/boton1.css';
 
 
 function Ticket() {
+    const [currentDate, setCurrentDate] = useState('');
+    const usuario = localStorage.getItem('usuario');
+    const correo = localStorage.getItem('correo');
+  
+useEffect(() => {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    const year = today.getFullYear();
+    const formattedDate = `${day}-${month}-${year}`; // Format the date as DD-MM-YYYY
+    setCurrentDate(formattedDate);
+  }, []);
   return (       
                 <div className='form-solicitud'>
                         <div className='form-box-h3'>
@@ -17,17 +29,17 @@ function Ticket() {
                                 </div>
                                 <div className='container-label-input'>
                                     <label className='label-box'>Fecha Ingreso</label>
-                                    <input className='input-box'></input>
+                                    <input className='input-box' value={currentDate} readOnly></input>
                                 </div>
                             </div>
                             <div className='form-box-order'>
                                 <div className='container-label-input'>
                                     <label className='label-box'>Solicitante Nombre</label>
-                                    <input className='input-box'></input>
+                                    <input value={usuario} readOnly className='input-box'></input>
                                 </div>
                                 <div className='container-label-input'>
                                     <label className='label-box'>Correo Electrónico</label>
-                                    <input className='input-box'></input>
+                                    <input value={correo} readOnly className='input-box'></input>
                                 </div>
                             </div>
                        

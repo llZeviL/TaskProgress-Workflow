@@ -27,7 +27,8 @@ async function login(req, res) {
           // Generar un token para el usuario
           const token = generateToken(usuario._id); // Suponiendo que el ID del usuario está en el campo "_id"
           // Devolver el token como parte de la respuesta
-          res.json({ success: true, message: 'Inicio de sesión exitoso', token });
+          res.json({ success: true, message: 'Inicio de sesión exitoso', token, nombreUsuario: usuario.nombreUsuario,
+          correo: usuario.correo });
       } else {
           console.log('Credenciales incorrectas'); // Mensaje de credenciales incorrectas en la consola
           res.status(401).json({ success: false, message: 'Credenciales incorrectas' });

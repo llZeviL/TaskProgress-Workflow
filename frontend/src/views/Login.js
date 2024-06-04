@@ -34,7 +34,7 @@ function Login() {
     // Extrae el nombre de usuario y contraseña del formulario
     const nombreUsuario = e.target.elements.nombreUsuario.value;
     const contrasena = e.target.elements.contrasena.value;
-   
+    
     // Envía una solicitud POST al servidor Node.js
     try {
       const response = await fetch('http://localhost:3000/api/login', {
@@ -51,7 +51,8 @@ function Login() {
         cambiarUsuarioValido(true);
         // Almacenar el token en el almacenamiento local del navegador
         localStorage.setItem('token', data.token);
-  
+        localStorage.setItem('usuario',data.nombreUsuario);
+        localStorage.setItem('correo',data.correo);
         window.location.href = '/'
   
       } else {
