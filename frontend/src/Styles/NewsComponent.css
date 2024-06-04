@@ -1,0 +1,68 @@
+.news-container {
+  width: 620px;
+  max-height: 180px;
+  background: rgba(255, 255, 255, 0.8); /* Blanco translúcido */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom:0px; /* Reducir el margen inferior para mover el componente hacia arriba */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permite el scroll si hay demasiadas noticias */
+  margin-left: 26%;
+  margin-top: -40px;
+}
+
+  .news-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.05); /* Translucidez en las tarjetas */
+    padding: 18px;
+    border-radius: 5px;
+    
+  }
+  
+  .date {
+    margin-right: 20px;
+    text-align: center;
+    color: #555;
+  }
+  
+  .date .day {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right:4px;
+  }
+  
+  .date .month {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .news-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color:#29335c;
+  }
+  
+  .news-content p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .news-container::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+  }
+  
+  .news-container::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  .news-container::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px; 
+  }
+  
+  .news-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+

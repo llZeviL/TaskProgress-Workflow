@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Ancho del cuadrado central */
+    align-items: center;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .form-container button {
+    margin-bottom: 10px;
+    margin-left: 115px;
+}
+  
+
+
+  input:focus {
+    outline: none;
+}
+
+input[type="text"],
+input[type="password"]{
+  margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+  border-bottom: 1px solid #ea0a0a; /* Añade solo un borde en la parte inferior */
+  padding-bottom: 1px; /* Añade un pequeño espacio debajo del borde */
+  border: 0;
+  margin-top: 10px;
+  border-bottom: 1px solid #060606; /* Agrega una línea inferior */
+  margin-left: 65px;
+  margin-bottom: 20px;
+  text-align: center;
+}

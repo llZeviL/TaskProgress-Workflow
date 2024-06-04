@@ -1,0 +1,57 @@
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-titulo {
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+  margin-right: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+  color: #29335c;
+}
+
+.contenedor-notificaciones {
+  width: 290px;
+  max-height: 290px; /* Establece una altura máxima */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+  margin-right: 3px;
+  margin-left: 10px;
+}
+
+.notifications-list {
+  list-style-type: none;
+  padding: 0;
+  height: 190px;
+  margin: 0;
+  display: flex; /* Hace que los elementos de la lista se muestren en una fila */
+  flex-direction: column; /* Alinea los elementos de la lista en una columna */
+}
+
+.notifications-list li {
+  margin-bottom: 10px;
+}
+
+.Titulo-Noti {
+  text-align: center; /* Alinea el texto al centro */
+}
+
+.contenedor-notificaciones::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+.contenedor-notificaciones::-webkit-scrollbar-thumb {
+  background: #888; /* Color del thumb del scrollbar */
+  border-radius: 5px; /* Radio del thumb del scrollbar */
+}
+
+.contenedor-notificaciones::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del thumb del scrollbar al pasar el mouse */
+}
+
+.contenedor-notificaciones::-webkit-scrollbar-track {
+  background: transparent; /* Establece el fondo del scrollbar como transparente */
+}

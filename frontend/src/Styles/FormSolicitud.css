@@ -1,0 +1,119 @@
+body{
+  overflow-x: hidden;
+}
+
+.form-solicitud{
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 8px;
+  width: 97.5%;
+  color: black;
+  border: 2px solid rgb(184, 183, 183);
+  margin: 1%;
+
+}
+
+.form-box-h2{
+ 
+  max-width: 30%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  background-color: #1d244191;
+  text-align: center;
+}
+.form-box-h3{
+  margin-top: 1%;
+  max-width: 30%;
+  border: 2px solid rgb(91, 91, 91);
+  border-radius: 8px 8px 8px 8px;
+  background-color: #1d244191;
+  text-align: center;
+  color:white;
+}
+
+.form-box{
+  background-color: (255, 255, 255, 0.767);
+  padding: 1%;  
+  border-top: transparent;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.form-box2{
+  background-color: (255, 255, 255, 0.767);
+  padding: 1%;  
+  border-top: transparent;
+  border-bottom:transparent;
+  height: 45vh;
+}
+
+.form-box-order{
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  padding-bottom: 1%;
+  border: 1px ;
+}
+
+.form-box-order2{
+  border-radius: 8px;
+  width: 100%;
+  padding-bottom: 1%;
+  margin-left: 6%;
+}
+
+.form-box-order > * {
+  margin-right: 10%; /* Espacio entre los objetos */
+  margin-left: 6%;
+}
+
+.input-box{
+  flex: 1; /* El input toma todo el espacio restante */
+  border: 1px solid #bbbdbf; /* Borde del input */
+  border-radius: 0 4px 4px 0; /* Bordes redondeados solo en la esquina derecha */
+  padding: 13px; /* Ajusta el espacio dentro del input */
+  background-color: #bbbbbb;
+  width: 100%; /* Ajusta el ancho del input al 100% */
+  max-width: 100%; /* Establece el ancho máximo para el input */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  
+}
+
+.input-box2{
+  flex: 1; /* El input toma todo el espacio restante */
+  border: 1px solid #bbbdbf; /* Borde del input */
+  border-radius: 0 4px 4px 0; /* Bordes redondeados solo en la esquina derecha */
+  padding: 8px; /* Ajusta el espacio dentro del input */
+  background-color: #faf5f5;
+  width: 100%; /* Ajusta el ancho del input al 100% */
+  max-width: 100%; /* Establece el ancho máximo para el input */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.label-box{
+  border-radius: 4px 0 0 4px;
+  width: 100px; /* Establece un ancho fijo para la etiqueta */
+  max-width: 100px; /* Establece un ancho máximo para la etiqueta */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  text-align: center;
+  color:white;
+}
+
+.container-label-input{
+  background-color: #1d244191;
+  display: flex; /* Utiliza Flexbox para alinear los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  width: 84%;
+  border: 1px solid black;
+}
+
+.container-btn{
+ display: flex;
+ border: 1px solid  transparent;
+ position: fixed; /* Fija los botones en la ventana del navegador */
+ justify-content: flex-end;
+ right: 5%;
+}
+
+.container-btn *{
+  margin-left:5%;
+}
+

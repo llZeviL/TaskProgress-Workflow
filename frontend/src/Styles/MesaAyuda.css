@@ -1,0 +1,21 @@
+/* MesaAyuda.css */
+
+/* Asegura que body y html ocupen toda la altura del viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Wrapper para contener el contenido y el footer */
+  .wrapper {
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura del viewport */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* El contenido ocupa todo el espacio disponible menos el espacio del footer */
+  .content {
+    flex: 1;
+  }
+  

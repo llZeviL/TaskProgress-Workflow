@@ -1,0 +1,10 @@
+.PruebasNav{
+    margin: 0;
+    padding: 0;
+}
+
+.contenido-principal {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinear elementos al inicio verticalmente */
+  }

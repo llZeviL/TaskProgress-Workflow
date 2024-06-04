@@ -1,0 +1,104 @@
+
+body {
+  background-image: url('../../public/workspace-1280538.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+ 
+}
+
+
+.section {
+  overflow: hidden;
+  height: 100px;
+}
+.p {
+  overflow: auto;
+  max-height: 100%;
+  width: calc(100% + 17px)
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 2%;
+    width: 500px; /* Ancho del cuadrado central */
+    background-color: rgb(125, 124, 124);
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container .alerta{
+  background-color: #f6f6f6; /* Color de fondo rojo */
+  color: rgb(255, 255, 255); /* Color de texto blanco */
+  padding: 15px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espaciado inferior */
+  border-radius: 4px; /* Bordes redondeados */
+  margin-left: 1px;
+  display: flex;
+  justify-content: center;
+
+  }
+  
+  
+  .form-container h2 {
+    margin-left: 80px;
+
+  }
+
+
+  input:focus {
+    outline: none;
+    
+}
+input[type="text"],
+input[type="password"]{
+  background-color: rgba(160, 143, 143, 0);
+  margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+  border-bottom: 1px solid #ffffff; /* Añade solo un borde en la parte inferior */
+  padding-bottom: 1px; /* Añade un pequeño espacio debajo del borde */
+  border: 0;
+  margin-top: 10px;
+  border-bottom: 1px solid #ffffff; /* Agrega una línea inferior */
+  border-color: #fffefe !important;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f7f7f7;
+  font-size: 14px
+  
+}
+::placeholder {
+  color: #f8f8f8;
+}
+
+.error-mensaje {
+  background-color: #ea2b1e;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  width: 90%;
+
+}
+
+.alerta-captcha {
+  background-color: #ea2b1e; /* Color de fondo rojo */
+  color: white; /* Color de texto blanco */
+  padding: 15px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espaciado inferior */
+  border-radius: 4px; /* Bordes redondeados */
+  margin-left: 1px;
+  display: flex;
+  justify-content: center;
+}
+

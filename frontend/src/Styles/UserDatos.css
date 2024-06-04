@@ -1,0 +1,40 @@
+.profile-summary {
+  width: 25%; /* Ancho del rectángulo */
+  height: 300px; /* Altura automática para ajustarse al contenido */
+  background-color: #f0f0f0; /* Color de fondo del rectángulo */
+  padding: 2px; /* Espacio interno */
+  margin-top: 15px; /* Margen superior para separarlo del navbar */
+  text-align: center; /* Centrar el contenido */
+  margin-left: 5px;
+}
+
+.profile-summary img {
+  width: 100px; /* Ancho de la imagen */
+  height: 100px; /* Altura de la imagen */
+  border-radius: 50%; /* Hacer la imagen redonda */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.profile-summary h2 {
+  margin-bottom: 5px; /* Margen inferior */
+}
+
+.profile-summary p {
+  margin-bottom: 5px; /* Margen inferior */
+}
+
+.upload-button {
+  background-color: #29335c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto; /* Centrar el botón horizontalmente */
+}
+
+.upload-button:hover {
+  background-color: #727272;
+}

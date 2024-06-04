@@ -1,0 +1,61 @@
+.main-container {
+  width: 50%; /* Ajusta el ancho según sea necesario */
+  height: 250px;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.slider-container {
+  position: relative;
+  height: 100%;
+}
+
+.leftArrow, .rightArrow {
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.3;
+}
+
+.leftArrow {
+  left: 5px;
+}
+
+.rightArrow {
+  right: 5px;
+}
+
+.container-images {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Asegura que las imágenes se dispongan horizontalmente */
+  transition: transform 0.5s ease; /* Suaviza la transición */
+  min-width: 100%; /* Cada imagen ocupará todo el contenedor */
+  height: 100%; /* Asegura que las imágenes llenen el contenedor verticalmente */
+}
+
+li {
+  min-width: 100%; /* Cada imagen ocupará todo el contenedor */
+  height: 100%; /* Asegura que las imágenes llenen el contenedor verticalmente */
+}
+
+li img {
+  width: 100%;
+  height: 100%;
+}
+
