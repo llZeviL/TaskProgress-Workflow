@@ -15,7 +15,7 @@ function Navbar() {
             <div className="navbar-header">
                 <h3>Task Progress</h3>
                 <nav ref={navRef} className="navbar-nav">
-                    <a href="/PruebasNav">Inicio</a>
+                    <a href="/Inicio">Inicio</a>
                     <a href="/MesaAyuda">Mesa de ayuda</a>
                     <a href="/#">Recursos Humanos</a>
                     <a href="/BibliotecaDigital">Biblioteca digital</a>
