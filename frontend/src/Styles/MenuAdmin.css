@@ -1,0 +1,59 @@
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en varias filas en pantallas pequeñas */
+    margin-top: 10%;
+    gap: 20px; /* Espacio entre botones */
+  }
+  
+  .menu-button {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    width: 15vw; /* Ancho relativo a la anchura de la ventana */
+    height: 15vw; /* Alto relativo a la anchura de la ventana */
+    max-width: 20%; /* Máximo ancho para pantallas grandes */
+    max-height: 15%; /* Máximo alto para pantallas grandes */
+    margin: 10px;
+    padding: 20px; /* Aumenta el padding para un área de clic más grande */
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 3vw; /* Tamaño de fuente relativo a la anchura de la ventana */
+  }
+  
+  .menu-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .menu-icon {
+    font-size: 5vw; /* Ajusta el tamaño del icono relativo a la anchura de la ventana */
+    max-font-size: 40px; /* Tamaño máximo para pantallas grandes */
+    margin-bottom: 10px; /* Espacio entre el icono y el texto */
+  }
+  
+  .menu-text {
+    font-size: 3vw; /* Ajusta el tamaño del texto relativo a la anchura de la ventana */
+    max-font-size: 16px; /* Tamaño máximo para pantallas grandes */
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .menu-button {
+      width: 40vw; /* Ajusta el ancho para pantallas pequeñas */
+      height: 40vw; /* Ajusta el alto para pantallas pequeñas */
+    }
+    
+    .menu-icon {
+      font-size: 16vw; /* Ajusta el tamaño del icono para pantallas pequeñas */
+    }
+    
+    .menu-text {
+      font-size: 6vw; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+  }
+  

@@ -9,6 +9,9 @@ import PruebasNav from './views/PruebasNav';
 import MesaAyuda from './views/MesaAyuda';
 import Biblioteca from './views/Biblioteca';
 import MiPerfil from './views/MiPerfil';
+import MenuAdmin from './components/MenuAdmin.js'
+import Usuarios from './components/Usuarios.js';
+import TicketList from './components/Ticketlist.js';
 
 const App = () => {
   return (
@@ -23,6 +26,9 @@ const App = () => {
           <Route path="/register" element={<PrivateRoute component={Register} />} />
           <Route path="/MesaAyuda" element={<MesaAyuda/>} />
           <Route path="/BibliotecaDigital" element={<Biblioteca />} />
+          <Route path="/MenuAdmin" element={<MenuAdmin/>} />
+          <Route path="/Users" element={<Usuarios/>} />
+          <Route path="/TicketList" element={<TicketList/>} />
         </Routes>
       </div>
     </Router>

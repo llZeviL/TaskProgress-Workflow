@@ -10,9 +10,13 @@ router.get('/verificarToken', verificarToken, (req, res) => {
     res.json({ valid: true, user: req.user });
   });
 
-router.get('/users', verifyToken , async (req, res) => {
-    const users = await controller.getAllUsers();
-    res.json(users);
+router.get('/users', async (req, res) => {
+    try {
+        const users = await controller.getAllUsers();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 router.get('/users/:id', verifyToken , async (req, res) => {
