@@ -45,7 +45,6 @@ function PruebasNav() {
       <div className='contenido-principal'>
         <UserDatos/>
         <SlideImages/>
-        <Notifications/>
       </div>
       <div className='Contenido-noticias'>
       <NewsComponent news={newsData} />

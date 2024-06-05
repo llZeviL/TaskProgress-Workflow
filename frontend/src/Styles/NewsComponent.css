@@ -1,15 +1,16 @@
 .news-container {
-  width: 620px;
-  max-height: 180px;
+  width: 50%;
+  max-height: 200px;
+  height: auto;
+  height: 40%;
   background: rgba(255, 255, 255, 0.8); /* Blanco translúcido */
   border-radius: 10px;
-  padding: 20px;
-  margin-bottom:0px; /* Reducir el margen inferior para mover el componente hacia arriba */
+  padding: 1.01%;
+  margin: -4% 22% 5% 26%; /* Ajustar todos los márgenes de una vez */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto; /* Permite el scroll si hay demasiadas noticias */
-  margin-left: 26%;
-  margin-top: -40px;
 }
+
 
   .news-card {
     display: flex;

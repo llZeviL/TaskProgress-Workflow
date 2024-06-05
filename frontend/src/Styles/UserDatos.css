@@ -1,18 +1,27 @@
 .profile-summary {
-  width: 25%; /* Ancho del rectángulo */
-  height: 300px; /* Altura automática para ajustarse al contenido */
+  width: 90%; /* Ajustar el ancho para que ocupe el 90% del contenedor padre */
+  max-width: 20%; /* Máximo ancho para mantener el diseño en pantallas grandes */
+  height: 5%; /* Ajustar la altura automáticamente */
   background-color: #f0f0f0; /* Color de fondo del rectángulo */
-  padding: 2px; /* Espacio interno */
-  margin-top: 15px; /* Margen superior para separarlo del navbar */
+  padding: 2%; /* Espacio interno */
+  margin-top: 1%; /* Margen superior para separarlo del navbar */
   text-align: center; /* Centrar el contenido */
-  margin-left: 5px;
+  margin-left: 1%;
+  margin-right: auto; /* Centrar el contenedor horizontalmente */
+  overflow: hidden; /* Evitar que el contenido se desborde */
 }
 
 .profile-summary img {
-  width: 100px; /* Ancho de la imagen */
-  height: 100px; /* Altura de la imagen */
+  width: 80%; /* Ajustar el ancho de la imagen para que sea responsiva */
+  max-width: 45%; /* Máximo ancho de la imagen */
+  height: auto; /* Ajustar la altura automáticamente */
   border-radius: 50%; /* Hacer la imagen redonda */
-  margin-bottom: 10px; /* Margen inferior */
+  margin-bottom: 1%px; /* Margen inferior */
+}
+
+.profile-summary h3, .profile-summary p {
+  margin: 5px 0; /* Margen superior e inferior */
+  word-wrap: break-word; /* Ajustar el texto para que no se desborde */
 }
 
 .profile-summary h2 {
@@ -27,10 +36,9 @@
   background-color: #29335c;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 3% 9%;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 10px;
   display: block;
   margin: 0 auto; /* Centrar el botón horizontalmente */
 }

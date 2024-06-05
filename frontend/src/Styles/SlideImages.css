@@ -1,9 +1,9 @@
 .main-container {
-  width: 50%; /* Ajusta el ancho según sea necesario */
-  height: 250px;
-  margin: 0 auto;
-  margin-left: 10px;
-  margin-top: 15px;
+  width: 80%;  /* Ajusta el ancho según sea necesario */
+  margin-top: 1%; /* Mantiene el margen superior */
+  margin-right: 22%; /* Elimina el margen derecho y permite que el contenedor ocupe más espacio */
+  margin-left: 1%; /* Ajusta el margen izquierdo para mover el contenedor a la izquierda */
+  margin-bottom: 5%;
 }
 
 .slider-container {
