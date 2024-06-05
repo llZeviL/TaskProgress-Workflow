@@ -38,7 +38,7 @@ input[type="password"]{
   border: 0;
   margin-top: 10px;
   border-bottom: 1px solid #060606; /* Agrega una línea inferior */
-  margin-left: 65px;
-  margin-bottom: 20px;
+  margin-top: 10%;
+  margin-bottom: 5%;
   text-align: center;
 }

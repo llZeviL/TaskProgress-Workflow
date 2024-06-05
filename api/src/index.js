@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const routes = require('./routes/routes.js');
+const ticketRoutes = require('./routes/routesticket.js');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Importa el paquete cors
 
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 
 
 app.use(express.json());
-app.use('/api', routes);
+app.use('/api', routes, ticketRoutes);
 
 
 

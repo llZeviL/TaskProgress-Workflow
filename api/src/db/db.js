@@ -1,6 +1,7 @@
 const { MongoClient } = require('mongodb');
 const { connected } = require('process');
 
+
 const MONGO_URI = "mongodb+srv://richard:Ravv2000.@workflow.w1utlsh.mongodb.net/WorkFlow";
 
 const client = new MongoClient(MONGO_URI);
@@ -21,5 +22,7 @@ async function connectDB() {
         console.error("Error al conectar a la base de datos:", error);
     }
 }
+
+  
 connectDB();
 module.exports = { connectDB };
