@@ -25,11 +25,9 @@ function UserList() {
                 console.error('Error al obtener los usuarios:', error);
             }
         }
-        
         fetchUsers();
     }, []);
     
-
     return (
         <div className="user-list-container">
             <h2>Lista de Usuarios</h2>
