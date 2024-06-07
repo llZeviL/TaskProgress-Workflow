@@ -3,10 +3,9 @@ const Usuario = require('../models/usermodel.js');
 const {connectDB} = require('../db/db.js')
 
 const generateToken = (userId) => {
-  const token = jwt.sign({ userId }, '1234', { expiresIn: '10s' }); // Cambia 'secret_key' por tu clave secreta y ajusta el tiempo de expiración según tus necesidades
+  const token = jwt.sign({ userId },'1234', { expiresIn: '1h' }); // Cambia 'secret_key' por tu clave secreta y ajusta el tiempo de expiración según tus necesidades
   return token;
 };
-
 
 async function findUserByUsernameAndPassword(username, password) {
   const db = await connectDB();

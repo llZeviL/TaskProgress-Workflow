@@ -19,17 +19,23 @@ function Ticket() {
         const day = String(today.getDate()).padStart(2, '0');
         const month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
         const year = today.getFullYear();
-        const formattedDate = `${day}-${month}-${year}`; // Format the date as DD-MM-YYYY
+        const hours = String(today.getHours()).padStart(2, '0');
+        const minutes = String(today.getMinutes()).padStart(2, '0');
+        const seconds = String(today.getSeconds()).padStart(2, '0');
+        const formattedDate = `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`; // Format the date as DD-MM-YYYY HH:MM:SS
         setCurrentDate(formattedDate);
     }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            const token = localStorage.getItem('token'); // Obtén el token del almacenamiento local
+    
             const response = await fetch('http://localhost:3000/api/tickets', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}` // Incluye el token en el encabezado
                 },
                 body: JSON.stringify({
                     fechaIngreso: currentDate,
@@ -39,9 +45,9 @@ function Ticket() {
                     motivo,
                     submotivo,
                     observacion
-                
                 })
             });
+    
             if (response.ok) {
                 // Manejar la respuesta exitosa
                 console.log('Ticket creado correctamente');

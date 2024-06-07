@@ -1,7 +1,7 @@
 /* Contenedor principal */
 .ticket-list-container {
-    max-width: 800px;
-    margin: 0 auto;
+    
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -33,6 +33,11 @@
 .ticket-table td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Evita el salto de línea */
+    overflow: hidden; /* Oculta el texto que excede el tamaño de la celda */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto que excede */
+    text-align: center; /* Centra el contenido horizontalmente */
+    vertical-align: middle; /* Centra el contenido verticalmente */
 }
 
 /* Estilo de hover */

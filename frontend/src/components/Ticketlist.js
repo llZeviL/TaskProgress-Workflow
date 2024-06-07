@@ -7,8 +7,13 @@ function TicketsList() {
 
     useEffect(() => {
         async function fetchTickets() {
+            const token = localStorage.getItem('token'); // Obtén el token del almacenamiento local
             try {
-                const response = await fetch('http://localhost:3000/api/tickets');
+                const response = await fetch('http://localhost:3000/api/tickets', {
+                    headers: {
+                        'Authorization': `Bearer ${token}` // Incluye el token en el encabezado
+                    }
+                });
                 const data = await response.json();
                 console.log(data);
                 // Asegúrate de que data es un array
@@ -21,7 +26,6 @@ function TicketsList() {
                 console.error('Error al obtener los tickets:', error);
             }
         }
-        
         fetchTickets();
     }, []);
 
@@ -32,18 +36,21 @@ function TicketsList() {
                 <thead>
                     <tr>
                         <th>Número de Solicitud</th>
+                        <th>Nombre del Usuario</th>
                         <th>Fecha Ingreso</th>
                         <th>Empresa</th>
                         <th>Área</th>
                         <th>Motivo</th>
                         <th>Submotivo</th>
                         <th>Observación</th>
+                        <th>Accción</th>
                     </tr>
                 </thead>
                 <tbody>
                     {tickets.map(ticket => (
                         <tr key={ticket._id}>
                             <td>{ticket.numeroSolicitud}</td>
+                            <td>{ticket.nombreUsuario}</td>
                             <td>{ticket.fechaIngreso}</td>
                             <td>{ticket.empresa}</td>
                             <td>{ticket.area}</td>

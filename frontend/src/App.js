@@ -12,6 +12,7 @@ import MiPerfil from './views/MiPerfil';
 import MenuAdmin from './components/MenuAdmin.js'
 import Usuarios from './components/Usuarios.js';
 import TicketList from './components/Ticketlist.js';
+import UserDatos from './components/EditarUsuario.js'
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/MenuAdmin" element={<MenuAdmin/>} />
           <Route path="/Users" element={<Usuarios/>} />
           <Route path="/TicketList" element={<TicketList/>} />
+          <Route path="/user/:id" element={<UserDatos/>} />
         </Routes>
       </div>
     </Router>
