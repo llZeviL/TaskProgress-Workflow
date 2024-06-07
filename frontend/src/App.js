@@ -14,6 +14,7 @@ import MenuAdmin2 from './components/MenuAdmin2.js'
 import Usuarios from './components/Usuarios.js';
 import TicketList from './components/Ticketlist.js';
 import AgregateNews from './components/AgregateNews.js';
+import UserDatos from './components/EditarUsuario.js'
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/ticket" element={<Ticket/>}/>
-          <Route path="/" element={<Home />} />
+          <Route path="/A" element={<Home />} />
           <Route path="/Perfil" element={<MiPerfil/>} />
           <Route path="/Inicio" element={<PruebasNav />} />
           <Route path="/register" element={<PrivateRoute component={Register} />} />
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/Users" element={<Usuarios/>} />
           <Route path="/TicketList" element={<TicketList/>} />
           <Route path="/Noticias" element={<AgregateNews/>} />
+          <Route path="/user/:id" element={<UserDatos/>} />
         </Routes>
       </div>
     </Router>

@@ -5,6 +5,7 @@ const ticketRoutes = require('./routes/routesticket.js');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Importa el paquete cors
 
+
 // Middleware para permitir CORS
 app.use(cors());
 
@@ -13,7 +14,7 @@ app.use(bodyParser.json());
 
 
 app.use(express.json());
-app.use('/api', routes, ticketRoutes);
+app.use('/api',ticketRoutes , routes);
 
 
 

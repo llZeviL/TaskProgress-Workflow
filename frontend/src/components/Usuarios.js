@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link para la redirección
+import { Link } from 'react-router-dom'; 
 import '../Styles/UsuariosList.css';
 
 function UserList() {
@@ -8,10 +8,14 @@ function UserList() {
     useEffect(() => {
         async function fetchUsers() {
             try {
-                const response = await fetch('http://localhost:3000/api/users');
+                const token = localStorage.getItem('token'); // Obtén el token del almacenamiento local
+                const response = await fetch('http://localhost:3000/api/users', {
+                    headers: {
+                        'Authorization': `Bearer ${token}` // Incluye el token en el encabezado
+                    }
+                });
                 const data = await response.json();
                 console.log(data);
-                // Asegúrate de que data es un array
                 if (Array.isArray(data)) {
                     setUsers(data);
                 } else {
@@ -24,6 +28,7 @@ function UserList() {
         
         fetchUsers();
     }, []);
+    
 
     return (
         <div className="user-list-container">
@@ -33,7 +38,7 @@ function UserList() {
                     <tr>
                         <th>Nombre de usuario</th>
                         <th>Correo</th>
-                        <th>Acción</th> {/* Columna para el botón */}
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>

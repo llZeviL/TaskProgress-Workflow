@@ -10,17 +10,16 @@ async function getAllUsers() {
 
 async function getUserById(id) {
     try {
-        const db = await connectDB(); // Conecta a la base de datos
+        const db = await connectDB();
         const collection = db.collection('usuario');
-        const usuario = await collection.findOne({ _id: new ObjectId(id) }); // Busca el usuario por ID
+        const usuario = await collection.findOne({ _id: new ObjectId(id) });
         if (!usuario) {
-            throw new Error('Usuario no encontrado.'); // Lanza un error si no se encuentra el usuario
+            throw new Error('Usuario no encontrado.');
         }
-        return usuario; // Devuelve el usuario encontrado
+        return usuario;
     } catch (error) {
         console.error('Error al obtener datos del usuario:', error);
-      
-        throw error; // Re-lanza el error para que sea manejado por el controlador que llama a esta función
+        throw error;
     }
 }
 
@@ -39,15 +38,36 @@ async function deleteUserById(id) {
     return result.deletedCount;
 }
 
+
 async function updateUserById(id, newData) {
-    const db = await connectDB();
-    const collection = db.collection('usuario');
-    const result = await collection.updateOne(
-        { _id: new ObjectId(id) },
-        { $set: newData }
-    );
-    return result.modifiedCount;
+    try {
+        const db = await connectDB(); // Conecta a la base de datos
+        const collection = db.collection('usuario'); // Selecciona la colección de usuarios
+
+        // Elimina el campo _id del objeto newData para evitar actualizarlo
+        delete newData._id;
+
+        const result = await collection.updateOne(
+            { _id: new ObjectId(id) }, // Filtra el usuario por su ID
+            { $set: newData } // Utiliza $set para especificar los campos que queremos actualizar
+        );
+
+        // Verifica si se encontró y actualizó el usuario
+        if (result.modifiedCount === 0) {
+            // Si no se encuentra el usuario, lanza un error con un mensaje personalizado
+            throw new Error('No se encontró ningún usuario con el ID proporcionado');
+        }
+
+        // Si se encuentra y actualiza el usuario, devuelve el número de documentos modificados
+        return result.modifiedCount;
+    } catch (error) {
+        // Maneja cualquier error que pueda ocurrir durante la actualización del usuario
+        console.error('Error al actualizar usuario:', error);
+        throw error; // Lanza el error para que sea manejado en el controlador
+    }
 }
+
+
 
 module.exports = { 
     getAllUsers, 
