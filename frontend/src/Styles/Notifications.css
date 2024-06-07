@@ -1,22 +1,23 @@
 .contenedor-principal {
   display: flex;
   flex-direction: column;
-  width: 20%; /* Ajustar a 90% para que ocupe la mayor parte del ancho disponible */
-  margin: auto; /* Centrar el contenedor principal */
+  width: 32vw; /* Ajustar a 90% para que ocupe la mayor parte del ancho disponible */
+  margin-right: 1%;
+  margin-top: 0.65%; /* Ajustar la altura para que coincida con .profile-summary */
 }
 
 .contenedor-titulo {
   padding: 2%;
   background-color: rgba(240, 240, 240, 0.8);
-  margin-right: 0.5%;
   margin-top: 2%;
   color: #29335c;
-  width: 102%;
+  width: 100%;
+  margin-right: 15%;
 }
 
 .contenedor-notificaciones {
   width: 100%; /* Ajustar a 100% para que ocupe todo el ancho disponible del contenedor padre */
-  max-height: 30vh; /* Ajustar la altura máxima a la mitad de la altura del viewport */
+  max-height: 34vh; /* Ajustar la altura máxima a la mitad de la altura del viewport */
   overflow-y: auto;
   padding: 3%;
   background-color: rgba(240, 240, 240, 0.8);

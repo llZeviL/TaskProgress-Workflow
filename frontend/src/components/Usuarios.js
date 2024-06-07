@@ -42,11 +42,11 @@ function UserList() {
                             <td>{user.nombreUsuario}</td>
                             <td>{user.correo}</td>
                             <td>
-                                <Link to={`/user/UserDatos`}> {/* Enlace a la vista del usuario */}
+                                <Link to={`/user/${user._id}`}> {/* Enlace a la vista del usuario */}
                                     <button className="view-user-button">Ver</button>
                                 </Link>
                             </td>
-                        </tr>
+                        </tr> 
                     ))}
                 </tbody>
             </table>

@@ -1,7 +1,7 @@
 .contenedor-biblioteca {
     width: calc(95% - 40px); 
     max-width: 9000px; 
-    margin: 20px auto;  
+    margin: 18px auto;  
     padding: 20px;
     border: 1px solid #ccc;
     height: 440px; 

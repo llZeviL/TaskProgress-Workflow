@@ -9,6 +9,9 @@ function UserDatos() {
     setProfileImage(file);
   };
 
+  const usuario = localStorage.getItem('usuario');
+  const correo = localStorage.getItem('correo');
+
   return (
     <div className="profile-summary">
       {profileImage ? (
@@ -20,8 +23,8 @@ function UserDatos() {
       <button onClick={() => document.getElementById('file-input').click()} className="upload-button">
         Cambiar foto de perfil
       </button>
-      <h3>Nombre del usuario</h3>
-      <p>Correo electrónico: usuario@example.com</p>
+      <h3>Nombre del usuario:{usuario} </h3>
+      <p>Correo electrónico:{correo}</p>
       <p>Edad: 30 años</p>
     </div>
   );

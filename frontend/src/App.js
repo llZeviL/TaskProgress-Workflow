@@ -10,8 +10,10 @@ import MesaAyuda from './views/MesaAyuda';
 import Biblioteca from './views/Biblioteca';
 import MiPerfil from './views/MiPerfil';
 import MenuAdmin from './components/MenuAdmin.js'
+import MenuAdmin2 from './components/MenuAdmin2.js'
 import Usuarios from './components/Usuarios.js';
 import TicketList from './components/Ticketlist.js';
+import AgregateNews from './components/AgregateNews.js';
 
 const App = () => {
   return (
@@ -27,8 +29,10 @@ const App = () => {
           <Route path="/MesaAyuda" element={<MesaAyuda/>} />
           <Route path="/BibliotecaDigital" element={<Biblioteca />} />
           <Route path="/MenuAdmin" element={<MenuAdmin/>} />
+          <Route path="/MenuAdmin2" element={<MenuAdmin2/>} />
           <Route path="/Users" element={<Usuarios/>} />
           <Route path="/TicketList" element={<TicketList/>} />
+          <Route path="/Noticias" element={<AgregateNews/>} />
         </Routes>
       </div>
     </Router>

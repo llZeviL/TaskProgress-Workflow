@@ -32,7 +32,7 @@ const newsData = [
     title: 'Título de la Noticia 4',
     description: 'Descripción breve de la noticia 4...'
   }
-  // Agrega más noticias según sea necesario
+
 ];
 
 
@@ -45,6 +45,7 @@ function PruebasNav() {
       <div className='contenido-principal'>
         <UserDatos/>
         <SlideImages/>
+        <Notifications/>
       </div>
       <div className='Contenido-noticias'>
       <NewsComponent news={newsData} />

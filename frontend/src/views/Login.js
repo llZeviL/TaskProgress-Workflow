@@ -53,7 +53,7 @@ function Login() {
         localStorage.setItem('token', data.token);
         localStorage.setItem('usuario',data.nombreUsuario);
         localStorage.setItem('correo',data.correo);
-        window.location.href = '/'
+        window.location.href = '/Inicio'
   
       } else {
         console.log('Credenciales incorrectas');

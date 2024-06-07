@@ -1,12 +1,12 @@
 .news-container {
-  width: 50%;
+  width: 49.5%;
   max-height: 200px;
   height: auto;
   height: 40%;
   background: rgba(255, 255, 255, 0.8); /* Blanco translúcido */
   border-radius: 10px;
   padding: 1.01%;
-  margin: -4% 22% 5% 26%; /* Ajustar todos los márgenes de una vez */
+  margin: -4% 22% 1% 26%; /* Ajustar todos los márgenes de una vez */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto; /* Permite el scroll si hay demasiadas noticias */
 }
