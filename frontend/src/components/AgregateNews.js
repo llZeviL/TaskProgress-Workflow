@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '../Styles/AgregateNews.css'; // Importa tu archivo de estilos CSS
 
-function AgregateNews({ onAgregarNoticia }) {
+function AgregateNews({ onAgregarNoticia, token }) { // Asegúrate de pasar el token como prop
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [fecha, setFecha] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (titulo.trim() !== '' && descripcion.trim() !== '' && fecha !== '') {
       const nuevaNoticia = {
@@ -14,10 +14,29 @@ function AgregateNews({ onAgregarNoticia }) {
         descripcion: descripcion.trim(),
         fecha: fecha,
       };
-      onAgregarNoticia(nuevaNoticia);
-      setTitulo('');
-      setDescripcion('');
-      setFecha('');
+      const token = localStorage.getItem('token');
+      try {
+        const response = await fetch('http://localhost:3000/api/noticias', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Agrega el token aquí
+          },
+          body: JSON.stringify(nuevaNoticia),
+        });
+
+        if (!response.ok) {
+          throw new Error('Error al agregar la noticia');
+        }
+
+        const data = await response.json();
+        onAgregarNoticia(data);
+        setTitulo('');
+        setDescripcion('');
+        setFecha('');
+      } catch (error) {
+        console.error('Error al agregar la noticia:', error);
+      }
     } else {
       alert('Por favor, complete todos los campos.');
     }
