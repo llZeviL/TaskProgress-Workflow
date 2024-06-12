@@ -26,10 +26,18 @@ async function getUserById(id) {
 async function createUser(data) {
     const db = await connectDB();
     const collection = db.collection('usuario');
-    const result = await collection.insertOne(data);
+    
+    // Añade el campo "estado" con el valor "activo"
+    const userData = {
+        ...data,
+        estado: 'activo'
+    };
+
+    const result = await collection.insertOne(userData);
     console.log(result);
     return result;
 }
+
 
 async function deleteUserById(id) {
     const db = await connectDB();

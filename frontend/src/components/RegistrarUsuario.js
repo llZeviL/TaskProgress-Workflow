@@ -1,46 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'; // Hook para obtener los parámetros de la URL
+import React, { useState } from 'react';
 import '../Styles/EditarUsuario.css';
 
-function UserDatos() {
-    const { id } = useParams(); // Obtiene el id del usuario desde la URL
+function AgregarUsuario() {
     const [user, setUser] = useState({
         nombreUsuario: '',
         contrasena: '',
         correo: '',
-        rol: '', // Nuevo campo
-        departamento: '',
-        estado:''
+        rol: '',
+        departamento: ''
     });
-
-    useEffect(() => {
-        async function fetchUser() {
-            const token = localStorage.getItem('token'); // Obtén el token del almacenamiento local
-            try {
-                const response = await fetch(`http://localhost:3000/api/users/${id}`, {
-                    headers: {
-                        'Authorization': `Bearer ${token}` // Incluye el token en el encabezado
-                    }
-                });
-                const data = await response.json();
-                setUser(data);
-        
-                // Convertir los encabezados de la respuesta a un objeto y mostrarlos en formato JSON
-                const headersObj = {};
-                for (const [key, value] of response.headers.entries()) {
-                    headersObj[key] = value;
-                }
-                console.log(headersObj);
-        
-                console.log(response.headers.get('Authorization')); // Obtener un encabezado específico ('Authorization' en este caso)
-            } catch (error) {
-                console.error('Error al obtener los datos del usuario:', error);
-            }
-        }
-        
-        fetchUser();
-        
-    }, [id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -49,34 +17,41 @@ function UserDatos() {
             [name]: value
         }));
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const token = localStorage.getItem('token'); // Obtén el token del almacenamiento local
         try {
-            // Utiliza la id de la URL para completar el campo id en userData
-            const userData = { ...user, id: id };
-            const response = await fetch(`http://localhost:3000/api/users/${id}`, {
-                method: 'PUT',
+            const response = await fetch('http://localhost:3000/api/users', {
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}` // Incluye el token en el encabezado
                 },
-                body: JSON.stringify(userData) // Envía userData en lugar de user
+                body: JSON.stringify(user) // Envía el nuevo usuario
             });
             if (response.ok) {
-                alert('Datos actualizados correctamente');
+                alert('Usuario creado correctamente');
+                // Reiniciar el formulario
+                setUser({
+                    nombreUsuario: '',
+                    contrasena: '',
+                    correo: '',
+                    rol: '',
+                    departamento: ''
+                });
             } else {
-                alert('Error al actualizar los datos');
+                alert('Error al crear el usuario');
             }
         } catch (error) {
-            console.error('Error al actualizar los datos del usuario:', error);
+            console.error('Error al crear el usuario:', error);
         }
     };
-    
+
     return (
         <div className="form-solicitud">
             <div className="form-box-h3">
-                <h3>Editar Datos del Usuario</h3>
+                <h3>Agregar Nuevo Usuario</h3>
             </div>
             <div className="form-box">
                 <div className="form-box-order1">
@@ -126,15 +101,6 @@ function UserDatos() {
                             onChange={handleChange}
                         />
                     </div>
-                    <div className="container-label-input">
-                        <label className="label-box">Estado</label>
-                        <input
-                            className="input-box"
-                            name="estado"
-                            value={user.estado}
-                            onChange={handleChange}
-                        />
-                    </div>
                 </div>
                 <div className="container-btn">
                     <button className="btn success" onClick={handleSubmit}>
@@ -146,4 +112,4 @@ function UserDatos() {
     );
 }
 
-export default UserDatos;
+export default AgregarUsuario;

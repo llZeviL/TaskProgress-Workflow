@@ -31,6 +31,9 @@ function UserList() {
     return (
         <div className="user-list-container">
             <h2>Lista de Usuarios</h2>
+            <Link to={`/registrar`}> 
+                <button className="register-button">Ver</button>
+            </Link>
             <table className="user-table">
                 <thead>
                     <tr>

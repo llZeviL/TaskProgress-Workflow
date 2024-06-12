@@ -40,3 +40,8 @@
 .user-table tr:hover {
     background-color: #f1f1f1; /* Fondo gris claro al pasar el ratón */
 }
+
+.register-button{
+    float: right;
+    padding: 5px 20px;
+}

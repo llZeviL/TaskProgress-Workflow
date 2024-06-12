@@ -13,6 +13,9 @@ import MenuAdmin from './components/MenuAdmin.js'
 import Usuarios from './components/Usuarios.js';
 import TicketList from './components/Ticketlist.js';
 import UserDatos from './components/EditarUsuario.js'
+import Registrar from './components/RegistrarUsuario.js'
+
+
 
 const App = () => {
   return (
@@ -31,6 +34,7 @@ const App = () => {
           <Route path="/Users" element={<Usuarios/>} />
           <Route path="/TicketList" element={<TicketList/>} />
           <Route path="/user/:id" element={<UserDatos/>} />
+          <Route path="/registrar" element={<Registrar/>} />
         </Routes>
       </div>
     </Router>

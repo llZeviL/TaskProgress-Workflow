@@ -58,7 +58,6 @@ function TicketsList() {
                             <td>{ticket.submotivo}</td>
                             <td>{ticket.observacion}</td>
                             <td>
-                                {/* Utiliza Link para crear un enlace */}
                                 <Link to={`/tickets/${ticket._id}`}> {/* Enlace a la vista del usuario */}
                                     <button className="view-user-button">Ver</button>
                                 </Link>

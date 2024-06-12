@@ -50,10 +50,9 @@ body{
     height: 45vh;
   }
   
-  .form-box-order{
+  .form-box-order1{
     border-radius: 8px;
     width: 100%;
-    display: flex;
     padding-bottom: 1%;
     border: 1px;
   }

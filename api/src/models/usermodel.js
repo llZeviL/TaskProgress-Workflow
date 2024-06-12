@@ -15,6 +15,18 @@ const usuarioSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true
+  },
+  rol: {
+    type: String,
+    required: true
+  },
+  departamento: {
+    type: String,
+    required: true
+  },
+  estado:{
+    type: String,
+    required: true
   }
 });
 
