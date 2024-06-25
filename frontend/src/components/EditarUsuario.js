@@ -9,7 +9,7 @@ function UserDatos() {
         contrasena: '',
         correo: '',
         rol: '', // Nuevo campo
-        departamento: '',
+        area: '',
         estado:''
     });
 
@@ -118,11 +118,11 @@ function UserDatos() {
                         />
                     </div>
                     <div className="container-label-input">
-                        <label className="label-box">Departamento</label>
+                        <label className="label-box">Area</label>
                         <input
                             className="input-box"
                             name="departamento"
-                            value={user.departamento}
+                            value={user.area}
                             onChange={handleChange}
                         />
                     </div>

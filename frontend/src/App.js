@@ -15,7 +15,7 @@ import AgregateNews from './components/AgregateNews.js';
 import UserDatos from './components/EditarUsuario.js'
 import Registrar from './components/RegistrarUsuario.js'
 import NewsList from './components/NewsList.js';
-
+import Ticketsus from './views/TicketsAprobar.js';
 const App = () => {
   return (
     <Router>
@@ -35,6 +35,7 @@ const App = () => {
           <Route path="/user/:id" element={<UserDatos/>} />
           <Route path="/registrar" element={<Registrar/>} />
           <Route path="/NoticiasList" element={<NewsList/>} />
+          <Route path="/Ticketsuser" element={<Ticketsus/>} />
         </Routes>
       </div>
     </Router>

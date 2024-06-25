@@ -22,6 +22,14 @@ async function getTicketById(id) {
     }
 }
 
+async function getTicketsByArea(area) {
+    const db = await connectDB();
+    const collection = db.collection('tickets');
+    // Filtrar por el ObjectId del área
+    return await collection.find({ area: area }).toArray();
+}
+
+
 async function createTicket(data) {
   const db = await connectDB();
   const collection = db.collection('tickets');
@@ -60,5 +68,6 @@ module.exports = {
     getTicketById, 
     createTicket, 
     deleteTicketById, 
-    updateTicketById
+    updateTicketById,
+    getTicketsByArea
 };

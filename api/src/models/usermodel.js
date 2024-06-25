@@ -20,7 +20,7 @@ const usuarioSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  departamento: {
+  area: {
     type: String,
     required: true
   },

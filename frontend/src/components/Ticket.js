@@ -106,7 +106,7 @@ function Ticket() {
                         <label className='label-box'>Área*</label>
                         <select className='input-box2' value={area} onChange={(e) => setArea(e.target.value)}>
                             <option disabled selected hidden></option>
-                            <option>Seleccione una opción</option>
+                            <option>ultimo</option>
                         </select>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ const MenuAdmin = () => {
         <FontAwesomeIcon icon={faBook} className="menu-icon" />
         <span className="menu-text">Biblioteca</span>
       </Link>
-      <Link to="/Noticias" className="menu-button">
+      <Link to="/NoticiasList" className="menu-button">
         <FontAwesomeIcon icon={faNewspaper} className="menu-icon" />
         <span className="menu-text">Noticias</span>
       </Link>

@@ -53,6 +53,8 @@ function Login() {
         localStorage.setItem('token', data.token);
         localStorage.setItem('usuario',data.nombreUsuario);
         localStorage.setItem('correo',data.correo);
+        localStorage.setItem('user',data);
+   
         window.location.href = '/Inicio'
   
       } else {

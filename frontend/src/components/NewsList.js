@@ -32,6 +32,9 @@ function NewsList() {
     return (
 <div className="ticket-list-container">
     <h2>Lista de Noticias</h2>
+    <Link to={`/Noticias`}> 
+                <button className="register-button">Ver</button>
+            </Link>
     <table className="ticket-table">
         <thead>
             <tr>

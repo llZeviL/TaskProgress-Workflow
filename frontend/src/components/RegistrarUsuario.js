@@ -7,7 +7,7 @@ function AgregarUsuario() {
         contrasena: '',
         correo: '',
         rol: '',
-        departamento: ''
+        area: ''
     });
 
     const handleChange = (e) => {
@@ -38,7 +38,7 @@ function AgregarUsuario() {
                     contrasena: '',
                     correo: '',
                     rol: '',
-                    departamento: ''
+                    area: ''
                 });
             } else {
                 alert('Error al crear el usuario');
@@ -93,11 +93,11 @@ function AgregarUsuario() {
                         />
                     </div>
                     <div className="container-label-input">
-                        <label className="label-box">Departamento</label>
+                        <label className="label-box">area</label>
                         <input
                             className="input-box"
-                            name="departamento"
-                            value={user.departamento}
+                            name="area"
+                            value={user.area}
                             onChange={handleChange}
                         />
                     </div>

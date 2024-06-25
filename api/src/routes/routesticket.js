@@ -5,7 +5,8 @@ const {
     getTicketById, 
     createTicket, 
     deleteTicketById, 
-    updateTicketById 
+    updateTicketById ,
+    getTicketsByDepartment
 } = require('../controllers/controllerticket.js');
 
 const router = express.Router();
@@ -54,5 +55,17 @@ router.put('/tickets/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+router.get('/tickets/filter', async (req, res) => {
+    const area = req.query.area; // Obtener el parámetro de consulta area
+    console.log(aera)
+    try {
+        const tickets = await getTicketsByArea(area); // Pasar el área al controlador
+        res.json(tickets);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 
 module.exports = router;
